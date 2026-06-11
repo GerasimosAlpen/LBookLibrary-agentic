@@ -203,6 +203,52 @@ A feature is considered incomplete if:
 4. find app -name "\*.php" -exec php -l {} \;
 5. php artisan test tests/Unit --log-junit=build/logs/junit_unit.xml --coverage-clover=build/logs/clover_unit.xml
 6. php artisan test tests/Feature --log-junit=build/logs/junit.xml --coverage-clover=build/logs/clover.xml
+7. Runtime Accessibility Validation
+
+### Runtime Accessibility Validation:
+- Start the application.
+- Verify that required feature pages are accessible.
+- Verify no HTTP 404 errors.
+- Verify no HTTP 500 errors.
+- Verify no Blade rendering errors.
+- Verify no route resolution errors.
+
+### If any validation gate fails:
+
+- Analyze the provided output.
+- Generate corrective changes.
+
+# Runtime Validation Protocol
+
+Static validation alone is not sufficient.
+The implementation must also remain runtime-compatible.
+The following are considered runtime defects:
+
+- Route Not Found
+- View Not Found
+- Missing Vite Manifest
+- Blade Rendering Exceptions
+- Undefined Named Routes
+- Invalid Redirect Targets
+- Dependency Resolution Failures
+- HTTP 404 on required application pages
+
+Route Integrity Protocol
+All route(), redirect(), middleware, service container bindings, repositories, services, controllers, and Blade references must resolve successfully.
+
+Any unresolved framework reference must be treated as a failed iteration.
+
+Application Entry Point Requirement
+
+The system must maintain an accessible root application entry point.
+
+At least one of the following must be true:
+
+- GET / returns HTTP 200
+OR
+- GET / redirects to a valid page.
+
+HTTP 404 on GET / is considered a runtime failure.
 
 ### Loop Rules:
 

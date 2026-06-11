@@ -3,6 +3,8 @@
 use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 
+Route::get('/', fn () => redirect()->route('auth.login'));
+
 Route::middleware('guest')->group(function () {
     Route::get('/auth/register', [AuthController::class, 'showRegister'])->name('auth.register');
     Route::post('/auth/register', [AuthController::class, 'register']);
