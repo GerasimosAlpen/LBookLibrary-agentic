@@ -27,7 +27,6 @@ class User extends Authenticatable
     {
         return [
             'role' => Role::class,
-            'email_verified_at' => 'datetime',
         ];
     }
 
