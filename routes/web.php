@@ -86,4 +86,17 @@ Route::middleware('auth')->group(function () {
     Route::patch('/reservations/{id}/cancel',       [ReservationController::class, 'cancel'])->name('reservations.cancel')->where('id', '[0-9]+');
 
     Route::get('/books/{id}/reservations',          [ReservationController::class, 'bookReservations'])->name('books.reservations')->where('id', '[0-9]+');
-});
+
+    // ─── User Engagement & Profile ────────────────────────────────────────────
+    Route::get('/users',                            [App\Http\Controllers\UserController::class, 'index'])->name('users.index');
+    Route::get('/users/history',                    [App\Http\Controllers\UserController::class, 'history'])->name('users.history');
+    Route::get('/users/recommendations',            [App\Http\Controllers\UserController::class, 'recommendations'])->name('users.recommendations');
+    Route::get('/users/notifications',              [App\Http\Controllers\NotificationController::class, 'index'])->name('users.notifications');
+    Route::get('/users/{id}',                       [App\Http\Controllers\UserController::class, 'show'])->name('users.show')->where('id', '[0-9]+');
+    Route::put('/users/{id}',                       [App\Http\Controllers\UserController::class, 'update'])->name('users.update')->where('id', '[0-9]+');
+    Route::delete('/users/{id}',                    [App\Http\Controllers\UserController::class, 'destroy'])->name('users.destroy')->where('id', '[0-9]+');
+    Route::patch('/users/notifications/{notifId}/read', [App\Http\Controllers\NotificationController::class, 'markAsRead'])->name('users.notifications.read')->where('notifId', '[0-9]+');
+
+    Route::get('/books/{id}/reviews',               [App\Http\Controllers\ReviewController::class, 'index'])->name('books.reviews.index')->where('id', '[0-9]+');
+    Route::post('/books/{id}/reviews',              [App\Http\Controllers\ReviewController::class, 'store'])->name('books.reviews.store')->where('id', '[0-9]+');
+    Route::delete('/books/{id}/reviews/{reviewId}', [App\Http\Controllers\ReviewController::class, 'destroy'])->name('books.reviews.destroy')->where(['id' => '[0-9]+', 'reviewId' => '[0-9]+']);});

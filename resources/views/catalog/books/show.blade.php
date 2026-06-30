@@ -309,6 +309,70 @@
         @endif
     @endauth
 
+    {{-- ─── Reviews ──────────────────────────────────────────────────────────── --}}
+    <div class="bg-slate-800/50 border border-slate-700/40 rounded-2xl p-6 sm:p-8">
+        <h2 class="text-xl font-bold text-white mb-6">Reviews</h2>
+        
+        @if($book->reviews->isEmpty())
+            <p class="text-slate-400">No reviews yet.</p>
+        @else
+            <div class="space-y-4">
+                @foreach($book->reviews as $review)
+                    <div class="bg-slate-700/30 p-4 rounded-xl border border-slate-600/30 flex justify-between">
+                        <div>
+                            <div class="flex items-center gap-2 mb-1">
+                                <span class="font-medium text-slate-200">{{ $review->user->name }}</span>
+                                <span class="text-yellow-400 text-sm">
+                                    {{ str_repeat('★', $review->rating) }}{{ str_repeat('☆', 5 - $review->rating) }}
+                                </span>
+                            </div>
+                            <p class="text-slate-300 text-sm">{{ $review->comment }}</p>
+                        </div>
+                        @auth
+                            @if(auth()->user()->role->value === 'ADMIN' || auth()->user()->id === $review->user_id)
+                                <form action="{{ route('books.reviews.destroy', ['id' => $book->id, 'reviewId' => $review->id]) }}" method="POST">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="text-red-400 hover:text-red-300 text-sm" onclick="return confirm('Delete this review?')">Delete</button>
+                                </form>
+                            @endif
+                        @endauth
+                    </div>
+                @endforeach
+            </div>
+        @endif
+
+        @auth
+            @php
+                $hasReviewed = $book->reviews->contains('user_id', auth()->id());
+            @endphp
+
+            @if(!$hasReviewed)
+                <div class="mt-8 pt-6 border-t border-slate-700/40">
+                    <h3 class="text-lg font-medium text-slate-200 mb-4">Write a Review</h3>
+                    <form action="{{ route('books.reviews.store', $book->id) }}" method="POST">
+                        @csrf
+                        <div class="mb-4">
+                            <label class="block text-slate-400 text-sm mb-2">Rating</label>
+                            <select name="rating" class="w-full bg-slate-900 border border-slate-700 text-slate-300 rounded p-2" required>
+                                <option value="5">5 - Excellent</option>
+                                <option value="4">4 - Good</option>
+                                <option value="3">3 - Average</option>
+                                <option value="2">2 - Poor</option>
+                                <option value="1">1 - Terrible</option>
+                            </select>
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-slate-400 text-sm mb-2">Comment (Optional)</label>
+                            <textarea name="comment" rows="3" class="w-full bg-slate-900 border border-slate-700 text-slate-300 rounded p-2"></textarea>
+                        </div>
+                        <button type="submit" class="bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 rounded">Submit Review</button>
+                    </form>
+                </div>
+            @endif
+        @endauth
+    </div>
+
     <div>
         <a href="{{ route('books.index') }}" class="text-sm text-slate-500 hover:text-slate-300 transition inline-flex items-center gap-1.5">
             <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
