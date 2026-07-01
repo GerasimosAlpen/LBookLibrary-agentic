@@ -46,6 +46,10 @@
                        class="px-4 py-2 text-sm rounded-lg transition-all {{ request()->routeIs('transactions.*') ? 'bg-indigo-600/20 text-indigo-300 border border-indigo-500/30' : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/60' }}">
                         Transactions
                     </a>
+                    <a href="{{ route('reservations.index') }}"
+                       class="px-4 py-2 text-sm rounded-lg transition-all {{ request()->routeIs('reservations.*') ? 'bg-violet-600/20 text-violet-300 border border-violet-500/30' : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/60' }}">
+                        Reservations
+                    </a>
                     @endauth
                 </div>
 

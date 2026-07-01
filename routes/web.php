@@ -6,6 +6,7 @@ use App\Http\Controllers\BookCopyController;
 use App\Http\Controllers\AuthorController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\TransactionController;
+use App\Http\Controllers\ReservationController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', fn () => redirect()->route('books.index'));
@@ -76,4 +77,13 @@ Route::middleware('auth')->group(function () {
     Route::post('/transactions/borrow',             [TransactionController::class, 'borrow'])->name('transactions.borrow');
     Route::patch('/transactions/{id}/return',       [TransactionController::class, 'return'])->name('transactions.return')->where('id', '[0-9]+');
     Route::patch('/transactions/{id}/extend',       [TransactionController::class, 'extend'])->name('transactions.extend')->where('id', '[0-9]+');
+
+    // ─── Reservation System ───────────────────────────────────────────────────
+
+    Route::get('/reservations',                     [ReservationController::class, 'index'])->name('reservations.index');
+    Route::post('/reservations',                    [ReservationController::class, 'store'])->name('reservations.store');
+    Route::get('/reservations/{id}',                [ReservationController::class, 'show'])->name('reservations.show')->where('id', '[0-9]+');
+    Route::patch('/reservations/{id}/cancel',       [ReservationController::class, 'cancel'])->name('reservations.cancel')->where('id', '[0-9]+');
+
+    Route::get('/books/{id}/reservations',          [ReservationController::class, 'bookReservations'])->name('books.reservations')->where('id', '[0-9]+');
 });

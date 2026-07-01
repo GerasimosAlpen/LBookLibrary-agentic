@@ -188,6 +188,97 @@
         </div>
     @endauth
 
+    {{-- ─── Reserve Interface ──────────────────────────────────────────────────── --}}
+    @auth
+        @php
+            $availCount = $book->copies->where('status.value', 'AVAILABLE')->count();
+            $existingReservation = $book->reservations
+                ->where('user_id', auth()->id())
+                ->whereIn('status.value', ['PENDING'])
+                ->first();
+        @endphp
+
+        <div class="bg-slate-800/50 border border-slate-700/40 rounded-2xl overflow-hidden">
+            <div class="flex items-center gap-2 px-6 py-4 border-b border-slate-700/40">
+                <svg class="w-4 h-4 text-violet-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                </svg>
+                <h2 class="text-sm font-semibold text-slate-300 uppercase tracking-wider">Reserve This Book</h2>
+            </div>
+
+            <div class="px-6 py-5">
+                @if($availCount > 0)
+                    {{-- Cannot reserve: copies available --}}
+                    <div class="flex items-center gap-3 text-sm text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 rounded-xl px-4 py-3 mb-4">
+                        <svg class="w-4 h-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                        {{ $availCount }} {{ Str::plural('copy', $availCount) }} available — please borrow directly instead.
+                    </div>
+                    <button disabled
+                            class="inline-flex items-center gap-2 bg-slate-700/40 border border-slate-600/30 text-slate-500 px-5 py-2.5 rounded-xl text-sm font-medium cursor-not-allowed">
+                        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                        </svg>
+                        Reserve (Not Needed)
+                    </button>
+                @elseif($existingReservation)
+                    {{-- Already reserved --}}
+                    <div class="flex items-center gap-3 text-sm text-violet-300 bg-violet-500/10 border border-violet-500/20 rounded-xl px-4 py-3 mb-4">
+                        <svg class="w-4 h-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                        You are already in the queue at position <strong>#{{ $existingReservation->queue_position }}</strong>.
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <a href="{{ route('reservations.show', $existingReservation->id) }}"
+                           class="inline-flex items-center gap-2 bg-violet-600/20 hover:bg-violet-600/30 border border-violet-500/30 text-violet-300 px-5 py-2.5 rounded-xl text-sm font-medium transition-all">
+                            View My Reservation
+                        </a>
+                        <form action="{{ route('reservations.cancel', $existingReservation->id) }}" method="POST" class="inline">
+                            @csrf @method('PATCH')
+                            <button id="btn-cancel-from-book-{{ $existingReservation->id }}"
+                                    type="submit"
+                                    onclick="return confirm('Cancel your reservation for this book?')"
+                                    class="inline-flex items-center gap-2 bg-rose-600/20 hover:bg-rose-600/30 border border-rose-500/30 text-rose-300 px-4 py-2.5 rounded-xl text-sm font-medium transition-all">
+                                Cancel Reservation
+                            </button>
+                        </form>
+                    </div>
+                @else
+                    {{-- Eligible to reserve --}}
+                    <p class="text-slate-400 text-sm mb-4">All copies are currently borrowed. Reserve to hold your place in the queue.</p>
+                    <form action="{{ route('reservations.store') }}" method="POST">
+                        @csrf
+                        <input type="hidden" name="book_id" value="{{ $book->id }}">
+                        <button id="btn-reserve-book-{{ $book->id }}"
+                                type="submit"
+                                onclick="return confirm('Reserve {{ addslashes($book->title) }}? You will be placed in the queue.')"
+                                class="inline-flex items-center gap-2 bg-violet-600 hover:bg-violet-500 text-white px-5 py-2.5 rounded-xl text-sm font-medium transition-all shadow-lg shadow-violet-600/20">
+                            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                            </svg>
+                            Reserve This Book
+                        </button>
+                    </form>
+                @endif
+            </div>
+        </div>
+
+        {{-- Admin: view full queue --}}
+        @if(in_array(auth()->user()->role->value, ['ADMIN','LIBRARIAN']))
+            <div class="bg-slate-800/30 border border-slate-700/30 rounded-xl px-5 py-3 flex items-center justify-between">
+                <p class="text-xs text-slate-400">
+                    <span class="text-slate-300 font-medium">{{ $book->reservations->whereIn('status.value', ['PENDING'])->count() }}</span> active reservation(s) in queue
+                </p>
+                <a href="{{ route('books.reservations', $book->id) }}"
+                   class="text-xs text-violet-400 hover:text-violet-300 transition-colors font-medium">
+                    View Reservation Queue →
+                </a>
+            </div>
+        @endif
+    @endauth
+
     {{-- Admin Actions --}}
     @auth
         @if(in_array(auth()->user()->role->value, ['ADMIN','LIBRARIAN']))
