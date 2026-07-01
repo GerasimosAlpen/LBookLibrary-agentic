@@ -14,11 +14,22 @@ class BookCopy extends Model
         'status',
     ];
 
+    protected $appends = ['barcode'];
+
     protected function casts(): array
     {
         return [
             'status' => CopyStatus::class,
         ];
+    }
+
+    /**
+     * Virtual barcode derived from the copy's primary key.
+     * Format: COPY-00001
+     */
+    public function getBarcodeAttribute(): string
+    {
+        return 'COPY-' . str_pad((string) $this->id, 5, '0', STR_PAD_LEFT);
     }
 
     public function book(): BelongsTo
@@ -30,4 +41,4 @@ class BookCopy extends Model
     {
         return $this->hasMany(Transaction::class, 'copy_id');
     }
-}
+}

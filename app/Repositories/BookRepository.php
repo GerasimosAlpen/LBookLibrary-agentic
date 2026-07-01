@@ -41,7 +41,7 @@ class BookRepository
 
     public function findById(int $id): ?Book
     {
-        return Book::with(['author', 'categories'])->find($id);
+        return Book::with(['author', 'categories', 'copies'])->find($id);
     }
 
     public function create(array $data): Book

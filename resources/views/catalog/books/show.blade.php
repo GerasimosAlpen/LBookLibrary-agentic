@@ -67,6 +67,77 @@
         @endif
     </div>
 
+    {{-- ─── Inventory Summary ─────────────────────────────────────────────────── --}}
+    <div class="bg-slate-800/50 border border-slate-700/40 rounded-2xl overflow-hidden">
+        {{-- Header --}}
+        <div class="flex items-center justify-between px-6 py-4 border-b border-slate-700/40">
+            <div class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
+                </svg>
+                <h2 class="text-sm font-semibold text-slate-300 uppercase tracking-wider">Inventory</h2>
+            </div>
+            <a href="{{ route('books.copies.index', $book->id) }}"
+               class="text-xs text-indigo-400 hover:text-indigo-300 transition font-medium"
+               id="link-view-all-copies">
+                View All Copies →
+            </a>
+        </div>
+
+        {{-- Stats --}}
+        <div class="grid grid-cols-2 sm:grid-cols-5 divide-x divide-slate-700/30">
+            @php
+                $copies       = $book->copies;
+                $totalCopies  = $copies->count();
+                $availCount   = $copies->where('status.value', 'AVAILABLE')->count();
+                $borrowedCount= $copies->where('status.value', 'BORROWED')->count();
+                $reservedCount= $copies->where('status.value', 'RESERVED')->count();
+                $lostCount    = $copies->where('status.value', 'LOST')->count();
+            @endphp
+
+            <div class="p-5 flex flex-col items-center gap-1">
+                <span class="text-2xl font-bold text-white">{{ $totalCopies }}</span>
+                <span class="text-xs text-slate-500 uppercase tracking-wider">Total</span>
+            </div>
+            <div class="p-5 flex flex-col items-center gap-1">
+                <span class="text-2xl font-bold text-emerald-400">{{ $availCount }}</span>
+                <span class="text-xs text-emerald-400/60 uppercase tracking-wider">Available</span>
+            </div>
+            <div class="p-5 flex flex-col items-center gap-1">
+                <span class="text-2xl font-bold text-amber-400">{{ $borrowedCount }}</span>
+                <span class="text-xs text-amber-400/60 uppercase tracking-wider">Borrowed</span>
+            </div>
+            <div class="p-5 flex flex-col items-center gap-1">
+                <span class="text-2xl font-bold text-blue-400">{{ $reservedCount }}</span>
+                <span class="text-xs text-blue-400/60 uppercase tracking-wider">Reserved</span>
+            </div>
+            <div class="p-5 flex flex-col items-center gap-1">
+                <span class="text-2xl font-bold text-red-400">{{ $lostCount }}</span>
+                <span class="text-xs text-red-400/60 uppercase tracking-wider">Lost</span>
+            </div>
+        </div>
+
+        {{-- Availability Indicator --}}
+        <div class="px-6 py-3 border-t border-slate-700/30">
+            @if($totalCopies === 0)
+                <span class="inline-flex items-center gap-2 text-xs text-slate-400">
+                    <span class="w-2 h-2 rounded-full bg-slate-500"></span>
+                    No copies registered
+                </span>
+            @elseif($availCount > 0)
+                <span class="inline-flex items-center gap-2 text-xs text-emerald-400">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                    Available — {{ $availCount }} {{ Str::plural('copy', $availCount) }} ready to borrow
+                </span>
+            @else
+                <span class="inline-flex items-center gap-2 text-xs text-red-400">
+                    <span class="w-2 h-2 rounded-full bg-red-400"></span>
+                    Out of Stock
+                </span>
+            @endif
+        </div>
+    </div>
+
     {{-- Admin Actions --}}
     @auth
         @if(in_array(auth()->user()->role->value, ['ADMIN','LIBRARIAN']))
@@ -75,6 +146,13 @@
                    class="inline-flex items-center gap-2 bg-amber-600/20 hover:bg-amber-600/30 border border-amber-500/30 text-amber-300 hover:text-amber-200 text-sm font-medium px-5 py-2.5 rounded-xl transition-all">
                     <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
                     Edit Book
+                </a>
+                <a href="{{ route('books.copies.index', $book->id) }}"
+                   class="inline-flex items-center gap-2 bg-indigo-600/20 hover:bg-indigo-600/30 border border-indigo-500/30 text-indigo-300 hover:text-indigo-200 text-sm font-medium px-5 py-2.5 rounded-xl transition-all">
+                    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
+                    </svg>
+                    Manage Copies
                 </a>
                 <form action="{{ route('books.destroy', $book->id) }}" method="POST"
                       onsubmit="return confirm('Delete this book? This action cannot be undone.')">

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BookController;
+use App\Http\Controllers\BookCopyController;
 use App\Http\Controllers\AuthorController;
 use App\Http\Controllers\CategoryController;
 use Illuminate\Support\Facades\Route;
@@ -54,4 +55,15 @@ Route::middleware('auth')->group(function () {
     Route::get('/categories/{category}/edit',[CategoryController::class, 'edit'])->name('categories.edit')->where('category', '[0-9]+');
     Route::put('/categories/{category}',     [CategoryController::class, 'update'])->name('categories.update')->where('category', '[0-9]+');
     Route::delete('/categories/{category}',  [CategoryController::class, 'destroy'])->name('categories.destroy')->where('category', '[0-9]+');
+
+    // ─── Inventory ────────────────────────────────────────────────────────────
+
+    // Book Copies
+    Route::get('/books/{book}/copies',              [BookCopyController::class, 'index'])->name('books.copies.index')->where('book', '[0-9]+');
+    Route::post('/books/{book}/copies',             [BookCopyController::class, 'store'])->name('books.copies.store')->where('book', '[0-9]+');
+    Route::put('/books/{book}/copies/{copy}',       [BookCopyController::class, 'update'])->name('books.copies.update')->where(['book' => '[0-9]+', 'copy' => '[0-9]+']);
+    Route::delete('/books/{book}/copies/{copy}',    [BookCopyController::class, 'destroy'])->name('books.copies.destroy')->where(['book' => '[0-9]+', 'copy' => '[0-9]+']);
+
+    // Book Availability
+    Route::get('/books/{book}/availability',        [BookCopyController::class, 'availability'])->name('books.availability')->where('book', '[0-9]+');
 });
