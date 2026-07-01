@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1782925239">
-  <project timestamp="1782925239" name="Clover Coverage">
+<coverage generated="1782925705">
+  <project timestamp="1782925705" name="Clover Coverage">
     <package name="App\Http\Controllers">
       <file name="D:\Engineer's Journey\Mahasiswa CS\Semester 4\Research Methodology\Laravel Coding\BookLibrary-Agentic\app\Http\Controllers\AuthController.php">
         <class name="App\Http\Controllers\AuthController" namespace="App\Http\Controllers">
@@ -1032,7 +1032,7 @@
       </file>
       <file name="D:\Engineer's Journey\Mahasiswa CS\Semester 4\Research Methodology\Laravel Coding\BookLibrary-Agentic\app\Services\TransactionService.php">
         <class name="App\Services\TransactionService" namespace="App\Services">
-          <metrics complexity="23" methods="12" coveredmethods="6" conditionals="0" coveredconditionals="0" statements="63" coveredstatements="53" elements="75" coveredelements="59"/>
+          <metrics complexity="23" methods="12" coveredmethods="6" conditionals="0" coveredconditionals="0" statements="64" coveredstatements="54" elements="76" coveredelements="60"/>
         </class>
         <line num="26" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="26"/>
         <line num="29" type="stmt" count="26"/>
@@ -1092,24 +1092,25 @@
         <line num="183" type="stmt" count="2"/>
         <line num="184" type="stmt" count="2"/>
         <line num="185" type="stmt" count="2"/>
-        <line num="195" type="method" name="calculateFine" visibility="public" complexity="3" crap="3.02" count="9"/>
+        <line num="195" type="method" name="calculateFine" visibility="public" complexity="3" crap="3.01" count="9"/>
         <line num="197" type="stmt" count="9"/>
         <line num="199" type="stmt" count="9"/>
         <line num="200" type="stmt" count="0"/>
         <line num="203" type="stmt" count="9"/>
-        <line num="205" type="stmt" count="9"/>
-        <line num="206" type="stmt" count="5"/>
-        <line num="209" type="stmt" count="4"/>
-        <line num="211" type="stmt" count="4"/>
-        <line num="220" type="method" name="synchronizeOverdueStatuses" visibility="public" complexity="2" crap="2" count="3"/>
-        <line num="222" type="stmt" count="3"/>
+        <line num="204" type="stmt" count="9"/>
+        <line num="207" type="stmt" count="9"/>
+        <line num="208" type="stmt" count="6"/>
+        <line num="211" type="stmt" count="3"/>
+        <line num="213" type="stmt" count="3"/>
+        <line num="222" type="method" name="synchronizeOverdueStatuses" visibility="public" complexity="2" crap="2" count="3"/>
         <line num="224" type="stmt" count="3"/>
-        <line num="225" type="stmt" count="1"/>
-        <line num="234" type="method" name="finePerDay" visibility="public" complexity="1" crap="1" count="1"/>
-        <line num="236" type="stmt" count="1"/>
-        <line num="242" type="method" name="loanDays" visibility="public" complexity="1" crap="1" count="1"/>
-        <line num="244" type="stmt" count="1"/>
-        <metrics loc="247" ncloc="176" classes="1" methods="12" coveredmethods="6" conditionals="0" coveredconditionals="0" statements="63" coveredstatements="53" elements="75" coveredelements="59"/>
+        <line num="226" type="stmt" count="3"/>
+        <line num="227" type="stmt" count="1"/>
+        <line num="236" type="method" name="finePerDay" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="238" type="stmt" count="1"/>
+        <line num="244" type="method" name="loanDays" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="246" type="stmt" count="1"/>
+        <metrics loc="249" ncloc="177" classes="1" methods="12" coveredmethods="6" conditionals="0" coveredconditionals="0" statements="64" coveredstatements="54" elements="76" coveredelements="60"/>
       </file>
     </package>
     <file name="D:\Engineer's Journey\Mahasiswa CS\Semester 4\Research Methodology\Laravel Coding\BookLibrary-Agentic\app\enums\CopyStatus.php">
@@ -1124,6 +1125,6 @@
     <file name="D:\Engineer's Journey\Mahasiswa CS\Semester 4\Research Methodology\Laravel Coding\BookLibrary-Agentic\app\enums\TransactionStatus.php">
       <metrics loc="10" ncloc="10" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
     </file>
-    <metrics files="47" loc="2431" ncloc="2231" classes="42" methods="199" coveredmethods="82" conditionals="0" coveredconditionals="0" statements="642" coveredstatements="282" elements="841" coveredelements="364"/>
+    <metrics files="47" loc="2433" ncloc="2232" classes="42" methods="199" coveredmethods="82" conditionals="0" coveredconditionals="0" statements="643" coveredstatements="283" elements="842" coveredelements="365"/>
   </project>
 </coverage>

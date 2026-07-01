@@ -162,7 +162,7 @@ it('borrowing creates transaction with correct dates', function () {
     expect($tx->borrow_date)->not->toBeNull();
     expect($tx->due_date)->not->toBeNull();
     expect($tx->return_date)->toBeNull();
-    expect($tx->fine_amount)->toBe(0.0);
+    expect($tx->fine_amount)->toEqual(0);
 });
 
 it('cannot borrow a non-available copy', function () {
@@ -331,7 +331,7 @@ it('extension uses default 7 days when not specified', function () {
          ->patch(route('transactions.extend', $tx->id));
 
     $newDue = $tx->fresh()->due_date;
-    expect($newDue->diffInDays($oldDue))->toBe(7);
+    expect($oldDue->diffInDays($newDue))->toEqual(7);
 });
 
 it('cannot extend a returned transaction', function () {

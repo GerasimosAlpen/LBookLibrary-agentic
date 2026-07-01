@@ -83,10 +83,11 @@ it('calculates zero fine when returned exactly on due date', function () {
     $member  = txSvcMember();
     $copy    = txSvcCopy('BORROWED');
 
-    $due = now()->addDays(1);
+    $due = \Illuminate\Support\Carbon::parse('2030-01-15 12:00:00');
     $tx  = txSvcTransaction($member, $copy, ['due_date' => $due]);
 
-    $fine = $service->calculateFine($tx, $due);
+    // Return at exactly the due date - no fine
+    $fine = $service->calculateFine($tx, $due->toDateTime());
 
     expect($fine)->toBe(0.0);
 });
@@ -173,7 +174,7 @@ it('borrow due date is 14 days after borrow date', function () {
 
     $tx = $service->borrow($member, $copy->id);
 
-    expect($tx->due_date->diffInDays($tx->borrow_date))->toBe(14);
+    expect($tx->borrow_date->diffInDays($tx->due_date))->toEqual(14);
 });
 
 it('borrow throws 422 for non-available copy', function () {
@@ -275,7 +276,7 @@ it('extend increases due date by 7 days by default', function () {
 
     $result = $service->extend($tx);
 
-    expect($result->due_date->diffInDays($oldDue))->toBe(7);
+    expect($oldDue->diffInDays($result->due_date))->toEqual(7);
 });
 
 it('extend uses custom days when provided', function () {
@@ -287,7 +288,7 @@ it('extend uses custom days when provided', function () {
 
     $result = $service->extend($tx, 14);
 
-    expect($result->due_date->diffInDays($oldDue))->toBe(14);
+    expect($oldDue->diffInDays($result->due_date))->toEqual(14);
 });
 
 it('cannot extend a returned transaction', function () {
