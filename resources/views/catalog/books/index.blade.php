@@ -47,9 +47,9 @@
                 <label for="category" class="sr-only">Category</label>
                 <select id="category" name="category"
                         class="w-full bg-slate-900/60 border border-slate-600/50 text-slate-200 text-sm rounded-xl px-3 py-2.5 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500/50 transition">
-                    <option value="">All Categories</option>
+                    <option value="" class="bg-slate-900 text-slate-100">All Categories</option>
                     @foreach($categories as $cat)
-                        <option value="{{ $cat->id }}" {{ request('category') == $cat->id ? 'selected' : '' }}>
+                        <option value="{{ $cat->id }}" class="bg-slate-900 text-slate-100" {{ request('category') == $cat->id ? 'selected' : '' }}>
                             {{ $cat->name }}
                         </option>
                     @endforeach
@@ -60,13 +60,13 @@
             <div class="flex gap-2">
                 <select name="sort_by"
                         class="flex-1 bg-slate-900/60 border border-slate-600/50 text-slate-200 text-sm rounded-xl px-3 py-2.5 focus:outline-none focus:border-indigo-500 transition">
-                    <option value="title"          {{ request('sort_by','title') === 'title' ? 'selected' : '' }}>Title</option>
-                    <option value="published_year"  {{ request('sort_by') === 'published_year' ? 'selected' : '' }}>Year</option>
+                    <option value="title" class="bg-slate-900 text-slate-100" {{ request('sort_by','title') === 'title' ? 'selected' : '' }}>Title</option>
+                    <option value="published_year" class="bg-slate-900 text-slate-100" {{ request('sort_by') === 'published_year' ? 'selected' : '' }}>Year</option>
                 </select>
                 <select name="sort_dir"
                         class="bg-slate-900/60 border border-slate-600/50 text-slate-200 text-sm rounded-xl px-3 py-2.5 focus:outline-none focus:border-indigo-500 transition">
-                    <option value="asc"  {{ request('sort_dir','asc') === 'asc' ? 'selected' : '' }}>↑ Asc</option>
-                    <option value="desc" {{ request('sort_dir') === 'desc' ? 'selected' : '' }}>↓ Desc</option>
+                    <option value="asc" class="bg-slate-900 text-slate-100" {{ request('sort_dir','asc') === 'asc' ? 'selected' : '' }}>↑ Asc</option>
+                    <option value="desc" class="bg-slate-900 text-slate-100" {{ request('sort_dir') === 'desc' ? 'selected' : '' }}>↓ Desc</option>
                 </select>
             </div>
         </div>

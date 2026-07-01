@@ -190,10 +190,10 @@
                         <label for="add-status" class="block text-sm font-medium text-slate-300 mb-2">Initial Status</label>
                         <select name="status" id="add-status"
                                 class="w-full bg-slate-800 border border-slate-600/50 text-slate-200 text-sm rounded-xl px-4 py-2.5 focus:outline-none focus:border-indigo-500/60 focus:ring-1 focus:ring-indigo-500/30 transition">
-                            <option value="AVAILABLE">AVAILABLE</option>
-                            <option value="BORROWED">BORROWED</option>
-                            <option value="RESERVED">RESERVED</option>
-                            <option value="LOST">LOST</option>
+                            <option value="AVAILABLE" class="bg-slate-900 text-slate-100">AVAILABLE</option>
+                            <option value="BORROWED" class="bg-slate-900 text-slate-100">BORROWED</option>
+                            <option value="RESERVED" class="bg-slate-900 text-slate-100">RESERVED</option>
+                            <option value="LOST" class="bg-slate-900 text-slate-100">LOST</option>
                         </select>
                     </div>
                     <div class="flex gap-3 pt-1">
@@ -235,10 +235,10 @@
                         <label for="edit-status" class="block text-sm font-medium text-slate-300 mb-2">Status</label>
                         <select name="status" id="edit-status"
                                 class="w-full bg-slate-800 border border-slate-600/50 text-slate-200 text-sm rounded-xl px-4 py-2.5 focus:outline-none focus:border-indigo-500/60 focus:ring-1 focus:ring-indigo-500/30 transition">
-                            <option value="AVAILABLE">AVAILABLE</option>
-                            <option value="BORROWED">BORROWED</option>
-                            <option value="RESERVED">RESERVED</option>
-                            <option value="LOST">LOST</option>
+                            <option value="AVAILABLE" class="bg-slate-900 text-slate-100">AVAILABLE</option>
+                            <option value="BORROWED" class="bg-slate-900 text-slate-100">BORROWED</option>
+                            <option value="RESERVED" class="bg-slate-900 text-slate-100">RESERVED</option>
+                            <option value="LOST" class="bg-slate-900 text-slate-100">LOST</option>
                         </select>
                     </div>
                     <div class="flex gap-3 pt-1">

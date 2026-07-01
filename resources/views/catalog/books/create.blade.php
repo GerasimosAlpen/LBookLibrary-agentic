@@ -28,9 +28,9 @@
             <label for="author_id" class="block text-sm font-medium text-slate-300 mb-1.5">Author <span class="text-red-400">*</span></label>
             <select id="author_id" name="author_id" required
                     class="w-full bg-slate-900/60 border {{ $errors->has('author_id') ? 'border-red-500/60' : 'border-slate-600/50' }} text-slate-200 text-sm rounded-xl px-4 py-2.5 focus:outline-none focus:border-indigo-500 transition">
-                <option value="">Select an author…</option>
+                <option value="" class="bg-slate-900 text-slate-100">Select an author…</option>
                 @foreach($authors as $author)
-                    <option value="{{ $author->id }}" {{ old('author_id') == $author->id ? 'selected' : '' }}>
+                    <option value="{{ $author->id }}" class="bg-slate-900 text-slate-100" {{ old('author_id') == $author->id ? 'selected' : '' }}>
                         {{ $author->name }}
                     </option>
                 @endforeach
