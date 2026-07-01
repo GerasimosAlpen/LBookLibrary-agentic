@@ -41,6 +41,12 @@
                        class="px-4 py-2 text-sm rounded-lg transition-all {{ request()->routeIs('categories.*') ? 'bg-indigo-600/20 text-indigo-300 border border-indigo-500/30' : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/60' }}">
                         Categories
                     </a>
+                    @auth
+                    <a href="{{ route('transactions.index') }}"
+                       class="px-4 py-2 text-sm rounded-lg transition-all {{ request()->routeIs('transactions.*') ? 'bg-indigo-600/20 text-indigo-300 border border-indigo-500/30' : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/60' }}">
+                        Transactions
+                    </a>
+                    @endauth
                 </div>
 
                 {{-- User Actions --}}

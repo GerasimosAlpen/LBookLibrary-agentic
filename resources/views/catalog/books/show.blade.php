@@ -138,6 +138,56 @@
         </div>
     </div>
 
+    {{-- ─── Borrow Interface ──────────────────────────────────────────────────── --}}
+    @auth
+        <div class="bg-slate-800/50 border border-slate-700/40 rounded-2xl overflow-hidden">
+            <div class="flex items-center gap-2 px-6 py-4 border-b border-slate-700/40">
+                <svg class="w-4 h-4 text-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+                <h2 class="text-sm font-semibold text-slate-300 uppercase tracking-wider">Borrow a Copy</h2>
+            </div>
+
+            @php
+                $availableCopies = $book->copies->where('status.value', 'AVAILABLE');
+            @endphp
+
+            @if($availableCopies->isEmpty())
+                <div class="px-6 py-8 text-center">
+                    <p class="text-slate-400 text-sm">No copies are currently available for borrowing.</p>
+                    <p class="text-slate-500 text-xs mt-1">Check back later or ask a librarian.</p>
+                </div>
+            @else
+                <div class="divide-y divide-slate-700/30">
+                    @foreach($availableCopies as $copy)
+                        <div class="flex items-center justify-between px-6 py-4">
+                            <div>
+                                <p class="text-sm font-medium text-slate-200 font-mono">{{ $copy->barcode }}</p>
+                                <span class="inline-flex items-center gap-1.5 text-xs text-emerald-400 mt-1">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+                                    Available
+                                </span>
+                            </div>
+                            <form action="{{ route('transactions.borrow') }}" method="POST">
+                                @csrf
+                                <input type="hidden" name="copy_id" value="{{ $copy->id }}">
+                                <button id="btn-borrow-copy-{{ $copy->id }}"
+                                        type="submit"
+                                        onclick="return confirm('Borrow {{ addslashes($copy->barcode) }}? Due date will be 14 days from today.')"
+                                        class="inline-flex items-center gap-2 bg-indigo-600 hover:bg-indigo-500 text-white px-4 py-2 rounded-xl text-sm font-medium transition-all shadow-md shadow-indigo-600/20">
+                                    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                    </svg>
+                                    Borrow
+                                </button>
+                            </form>
+                        </div>
+                    @endforeach
+                </div>
+            @endif
+        </div>
+    @endauth
+
     {{-- Admin Actions --}}
     @auth
         @if(in_array(auth()->user()->role->value, ['ADMIN','LIBRARIAN']))

@@ -5,6 +5,7 @@ use App\Http\Controllers\BookController;
 use App\Http\Controllers\BookCopyController;
 use App\Http\Controllers\AuthorController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\TransactionController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', fn () => redirect()->route('books.index'));
@@ -66,4 +67,13 @@ Route::middleware('auth')->group(function () {
 
     // Book Availability
     Route::get('/books/{book}/availability',        [BookCopyController::class, 'availability'])->name('books.availability')->where('book', '[0-9]+');
+
+    // ─── Borrowing Lifecycle ──────────────────────────────────────────────────
+
+    Route::get('/transactions',                     [TransactionController::class, 'index'])->name('transactions.index');
+    Route::get('/transactions/overdue',             [TransactionController::class, 'overdue'])->name('transactions.overdue');
+    Route::get('/transactions/{id}',                [TransactionController::class, 'show'])->name('transactions.show')->where('id', '[0-9]+');
+    Route::post('/transactions/borrow',             [TransactionController::class, 'borrow'])->name('transactions.borrow');
+    Route::patch('/transactions/{id}/return',       [TransactionController::class, 'return'])->name('transactions.return')->where('id', '[0-9]+');
+    Route::patch('/transactions/{id}/extend',       [TransactionController::class, 'extend'])->name('transactions.extend')->where('id', '[0-9]+');
 });
