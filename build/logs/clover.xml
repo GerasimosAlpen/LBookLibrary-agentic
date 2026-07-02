@@ -1,0 +1,731 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1782911263">
+  <project timestamp="1782911263" name="Clover Coverage">
+    <package name="App\Http\Controllers">
+      <file name="D:\Engineer's Journey\Mahasiswa CS\Semester 4\Research Methodology\Laravel Coding\BookLibrary-Agentic\app\Http\Controllers\AuthController.php">
+        <class name="App\Http\Controllers\AuthController" namespace="App\Http\Controllers">
+          <metrics complexity="10" methods="8" coveredmethods="8" conditionals="0" coveredconditionals="0" statements="33" coveredstatements="33" elements="41" coveredelements="41"/>
+        </class>
+        <line num="16" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="20"/>
+        <line num="18" type="stmt" count="20"/>
+        <line num="20" type="method" name="showRegister" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="22" type="stmt" count="1"/>
+        <line num="25" type="method" name="register" visibility="public" complexity="1" crap="1" count="4"/>
+        <line num="27" type="stmt" count="4"/>
+        <line num="29" type="stmt" count="4"/>
+        <line num="31" type="stmt" count="4"/>
+        <line num="33" type="stmt" count="4"/>
+        <line num="36" type="method" name="showLogin" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="38" type="stmt" count="1"/>
+        <line num="41" type="method" name="login" visibility="public" complexity="2" crap="2" count="3"/>
+        <line num="43" type="stmt" count="3"/>
+        <line num="44" type="stmt" count="3"/>
+        <line num="45" type="stmt" count="3"/>
+        <line num="46" type="stmt" count="3"/>
+        <line num="48" type="stmt" count="3"/>
+        <line num="49" type="stmt" count="2"/>
+        <line num="50" type="stmt" count="2"/>
+        <line num="51" type="stmt" count="2"/>
+        <line num="54" type="stmt" count="1"/>
+        <line num="56" type="stmt" count="1"/>
+        <line num="58" type="stmt" count="1"/>
+        <line num="61" type="method" name="logout" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="63" type="stmt" count="1"/>
+        <line num="65" type="stmt" count="1"/>
+        <line num="66" type="stmt" count="1"/>
+        <line num="68" type="stmt" count="1"/>
+        <line num="71" type="method" name="showUpdatePassword" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="73" type="stmt" count="1"/>
+        <line num="76" type="method" name="updatePassword" visibility="public" complexity="2" crap="2" count="2"/>
+        <line num="78" type="stmt" count="2"/>
+        <line num="79" type="stmt" count="2"/>
+        <line num="80" type="stmt" count="2"/>
+        <line num="81" type="stmt" count="2"/>
+        <line num="82" type="stmt" count="2"/>
+        <line num="84" type="stmt" count="2"/>
+        <line num="85" type="stmt" count="1"/>
+        <line num="86" type="stmt" count="1"/>
+        <line num="87" type="stmt" count="1"/>
+        <line num="90" type="stmt" count="1"/>
+        <metrics loc="93" ncloc="93" classes="1" methods="8" coveredmethods="8" conditionals="0" coveredconditionals="0" statements="33" coveredstatements="33" elements="41" coveredelements="41"/>
+      </file>
+      <file name="D:\Engineer's Journey\Mahasiswa CS\Semester 4\Research Methodology\Laravel Coding\BookLibrary-Agentic\app\Http\Controllers\AuthorController.php">
+        <class name="App\Http\Controllers\AuthorController" namespace="App\Http\Controllers">
+          <metrics complexity="12" methods="9" coveredmethods="8" conditionals="0" coveredconditionals="0" statements="31" coveredstatements="28" elements="40" coveredelements="36"/>
+        </class>
+        <line num="16" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="16"/>
+        <line num="18" type="stmt" count="16"/>
+        <line num="20" type="method" name="index" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="22" type="stmt" count="1"/>
+        <line num="23" type="stmt" count="1"/>
+        <line num="26" type="method" name="show" visibility="public" complexity="1" crap="1" count="3"/>
+        <line num="28" type="stmt" count="3"/>
+        <line num="29" type="stmt" count="2"/>
+        <line num="31" type="stmt" count="2"/>
+        <line num="34" type="method" name="create" visibility="public" complexity="1" crap="1" count="3"/>
+        <line num="36" type="stmt" count="3"/>
+        <line num="37" type="stmt" count="2"/>
+        <line num="40" type="method" name="store" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="42" type="stmt" count="2"/>
+        <line num="44" type="stmt" count="2"/>
+        <line num="45" type="stmt" count="2"/>
+        <line num="46" type="stmt" count="2"/>
+        <line num="49" type="method" name="edit" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="51" type="stmt" count="0"/>
+        <line num="53" type="stmt" count="0"/>
+        <line num="54" type="stmt" count="0"/>
+        <line num="57" type="method" name="update" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="59" type="stmt" count="1"/>
+        <line num="61" type="stmt" count="1"/>
+        <line num="62" type="stmt" count="1"/>
+        <line num="63" type="stmt" count="1"/>
+        <line num="66" type="method" name="destroy" visibility="public" complexity="2" crap="2" count="3"/>
+        <line num="68" type="stmt" count="3"/>
+        <line num="71" type="stmt" count="2"/>
+        <line num="72" type="stmt" count="1"/>
+        <line num="73" type="stmt" count="1"/>
+        <line num="74" type="stmt" count="1"/>
+        <line num="75" type="stmt" count="1"/>
+        <line num="78" type="stmt" count="1"/>
+        <line num="79" type="stmt" count="1"/>
+        <line num="80" type="stmt" count="1"/>
+        <line num="83" type="method" name="authorizeManage" visibility="private" complexity="3" crap="3" count="6"/>
+        <line num="85" type="stmt" count="6"/>
+        <line num="86" type="stmt" count="6"/>
+        <line num="87" type="stmt" count="2"/>
+        <metrics loc="91" ncloc="91" classes="1" methods="9" coveredmethods="8" conditionals="0" coveredconditionals="0" statements="31" coveredstatements="28" elements="40" coveredelements="36"/>
+      </file>
+      <file name="D:\Engineer's Journey\Mahasiswa CS\Semester 4\Research Methodology\Laravel Coding\BookLibrary-Agentic\app\Http\Controllers\BookController.php">
+        <class name="App\Http\Controllers\BookController" namespace="App\Http\Controllers">
+          <metrics complexity="12" methods="9" coveredmethods="8" conditionals="0" coveredconditionals="0" statements="36" coveredstatements="31" elements="45" coveredelements="39"/>
+        </class>
+        <line num="18" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="25"/>
+        <line num="22" type="stmt" count="25"/>
+        <line num="24" type="method" name="index" visibility="public" complexity="2" crap="2" count="7"/>
+        <line num="26" type="stmt" count="7"/>
+        <line num="27" type="stmt" count="7"/>
+        <line num="28" type="stmt" count="7"/>
+        <line num="29" type="stmt" count="7"/>
+        <line num="30" type="stmt" count="7"/>
+        <line num="31" type="stmt" count="7"/>
+        <line num="33" type="stmt" count="7"/>
+        <line num="35" type="stmt" count="7"/>
+        <line num="38" type="method" name="show" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="40" type="stmt" count="2"/>
+        <line num="41" type="stmt" count="1"/>
+        <line num="44" type="method" name="create" visibility="public" complexity="1" crap="1" count="3"/>
+        <line num="46" type="stmt" count="3"/>
+        <line num="48" type="stmt" count="2"/>
+        <line num="49" type="stmt" count="2"/>
+        <line num="51" type="stmt" count="2"/>
+        <line num="54" type="method" name="store" visibility="public" complexity="1" crap="1" count="3"/>
+        <line num="56" type="stmt" count="3"/>
+        <line num="58" type="stmt" count="3"/>
+        <line num="59" type="stmt" count="3"/>
+        <line num="60" type="stmt" count="3"/>
+        <line num="63" type="method" name="edit" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="65" type="stmt" count="0"/>
+        <line num="67" type="stmt" count="0"/>
+        <line num="68" type="stmt" count="0"/>
+        <line num="69" type="stmt" count="0"/>
+        <line num="71" type="stmt" count="0"/>
+        <line num="74" type="method" name="update" visibility="public" complexity="1" crap="1" count="3"/>
+        <line num="76" type="stmt" count="3"/>
+        <line num="78" type="stmt" count="3"/>
+        <line num="79" type="stmt" count="3"/>
+        <line num="80" type="stmt" count="3"/>
+        <line num="83" type="method" name="destroy" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="85" type="stmt" count="2"/>
+        <line num="87" type="stmt" count="1"/>
+        <line num="89" type="stmt" count="1"/>
+        <line num="90" type="stmt" count="1"/>
+        <line num="91" type="stmt" count="1"/>
+        <line num="94" type="method" name="authorizeManage" visibility="private" complexity="3" crap="3" count="5"/>
+        <line num="96" type="stmt" count="5"/>
+        <line num="97" type="stmt" count="5"/>
+        <line num="98" type="stmt" count="2"/>
+        <metrics loc="102" ncloc="102" classes="1" methods="9" coveredmethods="8" conditionals="0" coveredconditionals="0" statements="36" coveredstatements="31" elements="45" coveredelements="39"/>
+      </file>
+      <file name="D:\Engineer's Journey\Mahasiswa CS\Semester 4\Research Methodology\Laravel Coding\BookLibrary-Agentic\app\Http\Controllers\CategoryController.php">
+        <class name="App\Http\Controllers\CategoryController" namespace="App\Http\Controllers">
+          <metrics complexity="11" methods="9" coveredmethods="8" conditionals="0" coveredconditionals="0" statements="27" coveredstatements="24" elements="36" coveredelements="32"/>
+        </class>
+        <line num="15" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="18"/>
+        <line num="17" type="stmt" count="18"/>
+        <line num="19" type="method" name="index" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="21" type="stmt" count="1"/>
+        <line num="22" type="stmt" count="1"/>
+        <line num="25" type="method" name="show" visibility="public" complexity="1" crap="1" count="3"/>
+        <line num="27" type="stmt" count="3"/>
+        <line num="28" type="stmt" count="2"/>
+        <line num="30" type="stmt" count="2"/>
+        <line num="33" type="method" name="create" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="35" type="stmt" count="2"/>
+        <line num="36" type="stmt" count="1"/>
+        <line num="39" type="method" name="store" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="41" type="stmt" count="2"/>
+        <line num="43" type="stmt" count="2"/>
+        <line num="44" type="stmt" count="2"/>
+        <line num="45" type="stmt" count="2"/>
+        <line num="48" type="method" name="edit" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="50" type="stmt" count="0"/>
+        <line num="52" type="stmt" count="0"/>
+        <line num="53" type="stmt" count="0"/>
+        <line num="56" type="method" name="update" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="58" type="stmt" count="2"/>
+        <line num="60" type="stmt" count="2"/>
+        <line num="61" type="stmt" count="2"/>
+        <line num="62" type="stmt" count="2"/>
+        <line num="65" type="method" name="destroy" visibility="public" complexity="1" crap="1" count="3"/>
+        <line num="67" type="stmt" count="3"/>
+        <line num="69" type="stmt" count="2"/>
+        <line num="71" type="stmt" count="2"/>
+        <line num="72" type="stmt" count="2"/>
+        <line num="73" type="stmt" count="2"/>
+        <line num="76" type="method" name="authorizeManage" visibility="private" complexity="3" crap="3" count="5"/>
+        <line num="78" type="stmt" count="5"/>
+        <line num="79" type="stmt" count="5"/>
+        <line num="80" type="stmt" count="2"/>
+        <metrics loc="84" ncloc="84" classes="1" methods="9" coveredmethods="8" conditionals="0" coveredconditionals="0" statements="27" coveredstatements="24" elements="36" coveredelements="32"/>
+      </file>
+      <file name="D:\Engineer's Journey\Mahasiswa CS\Semester 4\Research Methodology\Laravel Coding\BookLibrary-Agentic\app\Http\Controllers\Controller.php">
+        <class name="App\Http\Controllers\Controller" namespace="App\Http\Controllers">
+          <metrics complexity="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+        </class>
+        <metrics loc="9" ncloc="8" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+      </file>
+    </package>
+    <package name="App\Http\Requests">
+      <file name="D:\Engineer's Journey\Mahasiswa CS\Semester 4\Research Methodology\Laravel Coding\BookLibrary-Agentic\app\Http\Requests\LoginRequest.php">
+        <class name="App\Http\Requests\LoginRequest" namespace="App\Http\Requests">
+          <metrics complexity="2" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="5" elements="7" coveredelements="7"/>
+        </class>
+        <line num="9" type="method" name="authorize" visibility="public" complexity="1" crap="1" count="4"/>
+        <line num="11" type="stmt" count="4"/>
+        <line num="14" type="method" name="rules" visibility="public" complexity="1" crap="1" count="4"/>
+        <line num="16" type="stmt" count="4"/>
+        <line num="17" type="stmt" count="4"/>
+        <line num="18" type="stmt" count="4"/>
+        <line num="19" type="stmt" count="4"/>
+        <metrics loc="22" ncloc="22" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="5" elements="7" coveredelements="7"/>
+      </file>
+      <file name="D:\Engineer's Journey\Mahasiswa CS\Semester 4\Research Methodology\Laravel Coding\BookLibrary-Agentic\app\Http\Requests\RegisterRequest.php">
+        <class name="App\Http\Requests\RegisterRequest" namespace="App\Http\Requests">
+          <metrics complexity="2" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="7" coveredstatements="7" elements="9" coveredelements="9"/>
+        </class>
+        <line num="9" type="method" name="authorize" visibility="public" complexity="1" crap="1" count="8"/>
+        <line num="11" type="stmt" count="8"/>
+        <line num="14" type="method" name="rules" visibility="public" complexity="1" crap="1" count="8"/>
+        <line num="16" type="stmt" count="8"/>
+        <line num="17" type="stmt" count="8"/>
+        <line num="18" type="stmt" count="8"/>
+        <line num="19" type="stmt" count="8"/>
+        <line num="20" type="stmt" count="8"/>
+        <line num="21" type="stmt" count="8"/>
+        <metrics loc="24" ncloc="24" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="7" coveredstatements="7" elements="9" coveredelements="9"/>
+      </file>
+      <file name="D:\Engineer's Journey\Mahasiswa CS\Semester 4\Research Methodology\Laravel Coding\BookLibrary-Agentic\app\Http\Requests\StoreAuthorRequest.php">
+        <class name="App\Http\Requests\StoreAuthorRequest" namespace="App\Http\Requests">
+          <metrics complexity="3" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="6" elements="8" coveredelements="8"/>
+        </class>
+        <line num="10" type="method" name="authorize" visibility="public" complexity="2" crap="2" count="4"/>
+        <line num="12" type="stmt" count="4"/>
+        <line num="13" type="stmt" count="4"/>
+        <line num="16" type="method" name="rules" visibility="public" complexity="1" crap="1" count="3"/>
+        <line num="18" type="stmt" count="3"/>
+        <line num="19" type="stmt" count="3"/>
+        <line num="20" type="stmt" count="3"/>
+        <line num="21" type="stmt" count="3"/>
+        <metrics loc="24" ncloc="24" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="6" elements="8" coveredelements="8"/>
+      </file>
+      <file name="D:\Engineer's Journey\Mahasiswa CS\Semester 4\Research Methodology\Laravel Coding\BookLibrary-Agentic\app\Http\Requests\StoreBookRequest.php">
+        <class name="App\Http\Requests\StoreBookRequest" namespace="App\Http\Requests">
+          <metrics complexity="3" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="11" coveredstatements="11" elements="13" coveredelements="13"/>
+        </class>
+        <line num="11" type="method" name="authorize" visibility="public" complexity="2" crap="2" count="7"/>
+        <line num="13" type="stmt" count="7"/>
+        <line num="14" type="stmt" count="7"/>
+        <line num="17" type="method" name="rules" visibility="public" complexity="1" crap="1" count="6"/>
+        <line num="19" type="stmt" count="6"/>
+        <line num="20" type="stmt" count="6"/>
+        <line num="21" type="stmt" count="6"/>
+        <line num="22" type="stmt" count="6"/>
+        <line num="23" type="stmt" count="6"/>
+        <line num="24" type="stmt" count="6"/>
+        <line num="25" type="stmt" count="6"/>
+        <line num="26" type="stmt" count="6"/>
+        <line num="27" type="stmt" count="6"/>
+        <metrics loc="30" ncloc="30" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="11" coveredstatements="11" elements="13" coveredelements="13"/>
+      </file>
+      <file name="D:\Engineer's Journey\Mahasiswa CS\Semester 4\Research Methodology\Laravel Coding\BookLibrary-Agentic\app\Http\Requests\StoreCategoryRequest.php">
+        <class name="App\Http\Requests\StoreCategoryRequest" namespace="App\Http\Requests">
+          <metrics complexity="3" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="5" elements="7" coveredelements="7"/>
+        </class>
+        <line num="10" type="method" name="authorize" visibility="public" complexity="2" crap="2" count="5"/>
+        <line num="12" type="stmt" count="5"/>
+        <line num="13" type="stmt" count="5"/>
+        <line num="16" type="method" name="rules" visibility="public" complexity="1" crap="1" count="4"/>
+        <line num="18" type="stmt" count="4"/>
+        <line num="19" type="stmt" count="4"/>
+        <line num="20" type="stmt" count="4"/>
+        <metrics loc="23" ncloc="23" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="5" elements="7" coveredelements="7"/>
+      </file>
+      <file name="D:\Engineer's Journey\Mahasiswa CS\Semester 4\Research Methodology\Laravel Coding\BookLibrary-Agentic\app\Http\Requests\UpdateAuthorRequest.php">
+        <class name="App\Http\Requests\UpdateAuthorRequest" namespace="App\Http\Requests">
+          <metrics complexity="3" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="6" elements="8" coveredelements="8"/>
+        </class>
+        <line num="10" type="method" name="authorize" visibility="public" complexity="2" crap="2" count="2"/>
+        <line num="12" type="stmt" count="2"/>
+        <line num="13" type="stmt" count="2"/>
+        <line num="16" type="method" name="rules" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="18" type="stmt" count="1"/>
+        <line num="19" type="stmt" count="1"/>
+        <line num="20" type="stmt" count="1"/>
+        <line num="21" type="stmt" count="1"/>
+        <metrics loc="24" ncloc="24" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="6" elements="8" coveredelements="8"/>
+      </file>
+      <file name="D:\Engineer's Journey\Mahasiswa CS\Semester 4\Research Methodology\Laravel Coding\BookLibrary-Agentic\app\Http\Requests\UpdateBookRequest.php">
+        <class name="App\Http\Requests\UpdateBookRequest" namespace="App\Http\Requests">
+          <metrics complexity="3" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="12" coveredstatements="12" elements="14" coveredelements="14"/>
+        </class>
+        <line num="11" type="method" name="authorize" visibility="public" complexity="2" crap="2" count="4"/>
+        <line num="13" type="stmt" count="4"/>
+        <line num="14" type="stmt" count="4"/>
+        <line num="17" type="method" name="rules" visibility="public" complexity="1" crap="1" count="3"/>
+        <line num="19" type="stmt" count="3"/>
+        <line num="21" type="stmt" count="3"/>
+        <line num="22" type="stmt" count="3"/>
+        <line num="23" type="stmt" count="3"/>
+        <line num="24" type="stmt" count="3"/>
+        <line num="25" type="stmt" count="3"/>
+        <line num="26" type="stmt" count="3"/>
+        <line num="27" type="stmt" count="3"/>
+        <line num="28" type="stmt" count="3"/>
+        <line num="29" type="stmt" count="3"/>
+        <metrics loc="32" ncloc="32" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="12" coveredstatements="12" elements="14" coveredelements="14"/>
+      </file>
+      <file name="D:\Engineer's Journey\Mahasiswa CS\Semester 4\Research Methodology\Laravel Coding\BookLibrary-Agentic\app\Http\Requests\UpdateCategoryRequest.php">
+        <class name="App\Http\Requests\UpdateCategoryRequest" namespace="App\Http\Requests">
+          <metrics complexity="3" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="6" elements="8" coveredelements="8"/>
+        </class>
+        <line num="11" type="method" name="authorize" visibility="public" complexity="2" crap="2" count="4"/>
+        <line num="13" type="stmt" count="4"/>
+        <line num="14" type="stmt" count="4"/>
+        <line num="17" type="method" name="rules" visibility="public" complexity="1" crap="1" count="3"/>
+        <line num="19" type="stmt" count="3"/>
+        <line num="21" type="stmt" count="3"/>
+        <line num="22" type="stmt" count="3"/>
+        <line num="23" type="stmt" count="3"/>
+        <metrics loc="26" ncloc="26" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="6" elements="8" coveredelements="8"/>
+      </file>
+      <file name="D:\Engineer's Journey\Mahasiswa CS\Semester 4\Research Methodology\Laravel Coding\BookLibrary-Agentic\app\Http\Requests\UpdatePasswordRequest.php">
+        <class name="App\Http\Requests\UpdatePasswordRequest" namespace="App\Http\Requests">
+          <metrics complexity="2" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="6" elements="8" coveredelements="8"/>
+        </class>
+        <line num="9" type="method" name="authorize" visibility="public" complexity="1" crap="1" count="4"/>
+        <line num="11" type="stmt" count="4"/>
+        <line num="14" type="method" name="rules" visibility="public" complexity="1" crap="1" count="4"/>
+        <line num="16" type="stmt" count="4"/>
+        <line num="17" type="stmt" count="4"/>
+        <line num="18" type="stmt" count="4"/>
+        <line num="19" type="stmt" count="4"/>
+        <line num="20" type="stmt" count="4"/>
+        <metrics loc="23" ncloc="23" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="6" elements="8" coveredelements="8"/>
+      </file>
+    </package>
+    <package name="App\Models">
+      <file name="D:\Engineer's Journey\Mahasiswa CS\Semester 4\Research Methodology\Laravel Coding\BookLibrary-Agentic\app\Models\Auditlog.php">
+        <class name="App\Models\AuditLog" namespace="App\Models">
+          <metrics complexity="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="2" coveredelements="0"/>
+        </class>
+        <line num="17" type="method" name="admin" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="19" type="stmt" count="0"/>
+        <metrics loc="21" ncloc="21" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="2" coveredelements="0"/>
+      </file>
+      <file name="D:\Engineer's Journey\Mahasiswa CS\Semester 4\Research Methodology\Laravel Coding\BookLibrary-Agentic\app\Models\Author.php">
+        <class name="App\Models\Author" namespace="App\Models">
+          <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
+        </class>
+        <line num="15" type="method" name="books" visibility="public" complexity="1" crap="1" count="6"/>
+        <line num="17" type="stmt" count="6"/>
+        <metrics loc="19" ncloc="19" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
+      </file>
+      <file name="D:\Engineer's Journey\Mahasiswa CS\Semester 4\Research Methodology\Laravel Coding\BookLibrary-Agentic\app\Models\Book.php">
+        <class name="App\Models\Book" namespace="App\Models">
+          <metrics complexity="5" methods="5" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="2" elements="10" coveredelements="4"/>
+        </class>
+        <line num="20" type="method" name="author" visibility="public" complexity="1" crap="1" count="16"/>
+        <line num="22" type="stmt" count="16"/>
+        <line num="25" type="method" name="categories" visibility="public" complexity="1" crap="1" count="18"/>
+        <line num="27" type="stmt" count="18"/>
+        <line num="30" type="method" name="copies" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="32" type="stmt" count="0"/>
+        <line num="35" type="method" name="reviews" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="37" type="stmt" count="0"/>
+        <line num="40" type="method" name="reservations" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="42" type="stmt" count="0"/>
+        <metrics loc="44" ncloc="44" classes="1" methods="5" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="2" elements="10" coveredelements="4"/>
+      </file>
+      <file name="D:\Engineer's Journey\Mahasiswa CS\Semester 4\Research Methodology\Laravel Coding\BookLibrary-Agentic\app\Models\BookCopy.php">
+        <class name="App\Models\BookCopy" namespace="App\Models">
+          <metrics complexity="3" methods="3" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="0" elements="8" coveredelements="0"/>
+        </class>
+        <line num="17" type="method" name="casts" visibility="protected" complexity="1" crap="2" count="0"/>
+        <line num="19" type="stmt" count="0"/>
+        <line num="20" type="stmt" count="0"/>
+        <line num="21" type="stmt" count="0"/>
+        <line num="24" type="method" name="book" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="26" type="stmt" count="0"/>
+        <line num="29" type="method" name="transactions" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="31" type="stmt" count="0"/>
+        <metrics loc="33" ncloc="33" classes="1" methods="3" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="0" elements="8" coveredelements="0"/>
+      </file>
+      <file name="D:\Engineer's Journey\Mahasiswa CS\Semester 4\Research Methodology\Laravel Coding\BookLibrary-Agentic\app\Models\Category.php">
+        <class name="App\Models\Category" namespace="App\Models">
+          <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
+        </class>
+        <line num="14" type="method" name="books" visibility="public" complexity="1" crap="1" count="7"/>
+        <line num="16" type="stmt" count="7"/>
+        <metrics loc="18" ncloc="18" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
+      </file>
+      <file name="D:\Engineer's Journey\Mahasiswa CS\Semester 4\Research Methodology\Laravel Coding\BookLibrary-Agentic\app\Models\Notification.php">
+        <class name="App\Models\Notification" namespace="App\Models">
+          <metrics complexity="2" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="0" elements="6" coveredelements="0"/>
+        </class>
+        <line num="16" type="method" name="casts" visibility="protected" complexity="1" crap="2" count="0"/>
+        <line num="18" type="stmt" count="0"/>
+        <line num="19" type="stmt" count="0"/>
+        <line num="20" type="stmt" count="0"/>
+        <line num="23" type="method" name="user" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="25" type="stmt" count="0"/>
+        <metrics loc="27" ncloc="27" classes="1" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="0" elements="6" coveredelements="0"/>
+      </file>
+      <file name="D:\Engineer's Journey\Mahasiswa CS\Semester 4\Research Methodology\Laravel Coding\BookLibrary-Agentic\app\Models\Reservation.php">
+        <class name="App\Models\Reservation" namespace="App\Models">
+          <metrics complexity="3" methods="3" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="0" elements="9" coveredelements="0"/>
+        </class>
+        <line num="19" type="method" name="casts" visibility="protected" complexity="1" crap="2" count="0"/>
+        <line num="21" type="stmt" count="0"/>
+        <line num="22" type="stmt" count="0"/>
+        <line num="23" type="stmt" count="0"/>
+        <line num="24" type="stmt" count="0"/>
+        <line num="27" type="method" name="user" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="29" type="stmt" count="0"/>
+        <line num="32" type="method" name="book" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="34" type="stmt" count="0"/>
+        <metrics loc="36" ncloc="36" classes="1" methods="3" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="0" elements="9" coveredelements="0"/>
+      </file>
+      <file name="D:\Engineer's Journey\Mahasiswa CS\Semester 4\Research Methodology\Laravel Coding\BookLibrary-Agentic\app\Models\Review.php">
+        <class name="App\Models\Review" namespace="App\Models">
+          <metrics complexity="2" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="0" elements="4" coveredelements="0"/>
+        </class>
+        <line num="17" type="method" name="user" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="19" type="stmt" count="0"/>
+        <line num="22" type="method" name="book" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="24" type="stmt" count="0"/>
+        <metrics loc="26" ncloc="26" classes="1" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="0" elements="4" coveredelements="0"/>
+      </file>
+      <file name="D:\Engineer's Journey\Mahasiswa CS\Semester 4\Research Methodology\Laravel Coding\BookLibrary-Agentic\app\Models\Transaction.php">
+        <class name="App\Models\Transaction" namespace="App\Models">
+          <metrics complexity="3" methods="3" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="8" coveredstatements="0" elements="11" coveredelements="0"/>
+        </class>
+        <line num="21" type="method" name="casts" visibility="protected" complexity="1" crap="2" count="0"/>
+        <line num="23" type="stmt" count="0"/>
+        <line num="24" type="stmt" count="0"/>
+        <line num="25" type="stmt" count="0"/>
+        <line num="26" type="stmt" count="0"/>
+        <line num="27" type="stmt" count="0"/>
+        <line num="28" type="stmt" count="0"/>
+        <line num="31" type="method" name="user" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="33" type="stmt" count="0"/>
+        <line num="36" type="method" name="copy" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="38" type="stmt" count="0"/>
+        <metrics loc="40" ncloc="40" classes="1" methods="3" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="8" coveredstatements="0" elements="11" coveredelements="0"/>
+      </file>
+      <file name="D:\Engineer's Journey\Mahasiswa CS\Semester 4\Research Methodology\Laravel Coding\BookLibrary-Agentic\app\Models\User.php">
+        <class name="App\Models\User" namespace="App\Models">
+          <metrics complexity="6" methods="6" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="8" coveredstatements="3" elements="14" coveredelements="4"/>
+        </class>
+        <line num="26" type="method" name="casts" visibility="protected" complexity="1" crap="1" count="73"/>
+        <line num="28" type="stmt" count="73"/>
+        <line num="29" type="stmt" count="73"/>
+        <line num="30" type="stmt" count="73"/>
+        <line num="33" type="method" name="transactions" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="35" type="stmt" count="0"/>
+        <line num="38" type="method" name="reservations" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="40" type="stmt" count="0"/>
+        <line num="43" type="method" name="reviews" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="45" type="stmt" count="0"/>
+        <line num="48" type="method" name="notifications" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="50" type="stmt" count="0"/>
+        <line num="53" type="method" name="auditLogs" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="55" type="stmt" count="0"/>
+        <metrics loc="57" ncloc="57" classes="1" methods="6" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="8" coveredstatements="3" elements="14" coveredelements="4"/>
+      </file>
+    </package>
+    <package name="App\Providers">
+      <file name="D:\Engineer's Journey\Mahasiswa CS\Semester 4\Research Methodology\Laravel Coding\BookLibrary-Agentic\app\Providers\AppServiceProvider.php">
+        <class name="App\Providers\AppServiceProvider" namespace="App\Providers">
+          <metrics complexity="2" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="2" elements="4" coveredelements="4"/>
+        </class>
+        <line num="12" type="method" name="register" visibility="public" complexity="1" crap="1" count="84"/>
+        <line num="15" type="stmt" count="84"/>
+        <line num="20" type="method" name="boot" visibility="public" complexity="1" crap="1" count="84"/>
+        <line num="23" type="stmt" count="84"/>
+        <metrics loc="25" ncloc="17" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="2" elements="4" coveredelements="4"/>
+      </file>
+    </package>
+    <package name="App\Repositories">
+      <file name="D:\Engineer's Journey\Mahasiswa CS\Semester 4\Research Methodology\Laravel Coding\BookLibrary-Agentic\app\Repositories\AuthRepository.php">
+        <class name="App\Repositories\AuthRepository" namespace="App\Repositories">
+          <metrics complexity="3" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="9" elements="12" coveredelements="12"/>
+        </class>
+        <line num="10" type="method" name="findByEmail" visibility="public" complexity="1" crap="1" count="3"/>
+        <line num="12" type="stmt" count="3"/>
+        <line num="15" type="method" name="create" visibility="public" complexity="1" crap="1" count="4"/>
+        <line num="17" type="stmt" count="4"/>
+        <line num="18" type="stmt" count="4"/>
+        <line num="19" type="stmt" count="4"/>
+        <line num="20" type="stmt" count="4"/>
+        <line num="21" type="stmt" count="4"/>
+        <line num="24" type="method" name="updatePassword" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="26" type="stmt" count="1"/>
+        <line num="27" type="stmt" count="1"/>
+        <line num="28" type="stmt" count="1"/>
+        <metrics loc="31" ncloc="31" classes="1" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="9" elements="12" coveredelements="12"/>
+      </file>
+      <file name="D:\Engineer's Journey\Mahasiswa CS\Semester 4\Research Methodology\Laravel Coding\BookLibrary-Agentic\app\Repositories\AuthorRepository.php">
+        <class name="App\Repositories\AuthorRepository" namespace="App\Repositories">
+          <metrics complexity="7" methods="7" coveredmethods="7" conditionals="0" coveredconditionals="0" statements="21" coveredstatements="21" elements="28" coveredelements="28"/>
+        </class>
+        <line num="11" type="method" name="paginate" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="13" type="stmt" count="1"/>
+        <line num="14" type="stmt" count="1"/>
+        <line num="15" type="stmt" count="1"/>
+        <line num="16" type="stmt" count="1"/>
+        <line num="19" type="method" name="all" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="21" type="stmt" count="2"/>
+        <line num="24" type="method" name="findById" visibility="public" complexity="1" crap="1" count="6"/>
+        <line num="26" type="stmt" count="6"/>
+        <line num="29" type="method" name="create" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="31" type="stmt" count="2"/>
+        <line num="32" type="stmt" count="2"/>
+        <line num="33" type="stmt" count="2"/>
+        <line num="34" type="stmt" count="2"/>
+        <line num="37" type="method" name="update" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="39" type="stmt" count="1"/>
+        <line num="40" type="stmt" count="1"/>
+        <line num="41" type="stmt" count="1"/>
+        <line num="42" type="stmt" count="1"/>
+        <line num="44" type="stmt" count="1"/>
+        <line num="47" type="method" name="delete" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="49" type="stmt" count="1"/>
+        <line num="52" type="method" name="booksPaginate" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="54" type="stmt" count="2"/>
+        <line num="55" type="stmt" count="2"/>
+        <line num="56" type="stmt" count="2"/>
+        <line num="57" type="stmt" count="2"/>
+        <line num="58" type="stmt" count="2"/>
+        <metrics loc="61" ncloc="61" classes="1" methods="7" coveredmethods="7" conditionals="0" coveredconditionals="0" statements="21" coveredstatements="21" elements="28" coveredelements="28"/>
+      </file>
+      <file name="D:\Engineer's Journey\Mahasiswa CS\Semester 4\Research Methodology\Laravel Coding\BookLibrary-Agentic\app\Repositories\BookRepository.php">
+        <class name="App\Repositories\BookRepository" namespace="App\Repositories">
+          <metrics complexity="10" methods="5" coveredmethods="5" conditionals="0" coveredconditionals="0" statements="43" coveredstatements="43" elements="48" coveredelements="48"/>
+        </class>
+        <line num="11" type="method" name="paginate" visibility="public" complexity="3" crap="3" count="7"/>
+        <line num="18" type="stmt" count="7"/>
+        <line num="19" type="stmt" count="7"/>
+        <line num="20" type="stmt" count="7"/>
+        <line num="22" type="stmt" count="7"/>
+        <line num="23" type="stmt" count="7"/>
+        <line num="24" type="stmt" count="3"/>
+        <line num="25" type="stmt" count="3"/>
+        <line num="26" type="stmt" count="3"/>
+        <line num="27" type="stmt" count="3"/>
+        <line num="28" type="stmt" count="3"/>
+        <line num="29" type="stmt" count="3"/>
+        <line num="30" type="stmt" count="3"/>
+        <line num="31" type="stmt" count="7"/>
+        <line num="32" type="stmt" count="7"/>
+        <line num="33" type="stmt" count="1"/>
+        <line num="34" type="stmt" count="1"/>
+        <line num="35" type="stmt" count="1"/>
+        <line num="36" type="stmt" count="7"/>
+        <line num="37" type="stmt" count="7"/>
+        <line num="38" type="stmt" count="7"/>
+        <line num="39" type="stmt" count="7"/>
+        <line num="42" type="method" name="findById" visibility="public" complexity="1" crap="1" count="6"/>
+        <line num="44" type="stmt" count="6"/>
+        <line num="47" type="method" name="create" visibility="public" complexity="2" crap="2" count="3"/>
+        <line num="49" type="stmt" count="3"/>
+        <line num="50" type="stmt" count="3"/>
+        <line num="51" type="stmt" count="3"/>
+        <line num="52" type="stmt" count="3"/>
+        <line num="53" type="stmt" count="3"/>
+        <line num="54" type="stmt" count="3"/>
+        <line num="55" type="stmt" count="3"/>
+        <line num="57" type="stmt" count="3"/>
+        <line num="58" type="stmt" count="2"/>
+        <line num="61" type="stmt" count="3"/>
+        <line num="64" type="method" name="update" visibility="public" complexity="3" crap="3" count="3"/>
+        <line num="66" type="stmt" count="3"/>
+        <line num="67" type="stmt" count="3"/>
+        <line num="68" type="stmt" count="3"/>
+        <line num="69" type="stmt" count="3"/>
+        <line num="70" type="stmt" count="3"/>
+        <line num="71" type="stmt" count="3"/>
+        <line num="72" type="stmt" count="3"/>
+        <line num="74" type="stmt" count="3"/>
+        <line num="76" type="stmt" count="3"/>
+        <line num="79" type="method" name="delete" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="81" type="stmt" count="1"/>
+        <line num="82" type="stmt" count="1"/>
+        <metrics loc="85" ncloc="85" classes="1" methods="5" coveredmethods="5" conditionals="0" coveredconditionals="0" statements="43" coveredstatements="43" elements="48" coveredelements="48"/>
+      </file>
+      <file name="D:\Engineer's Journey\Mahasiswa CS\Semester 4\Research Methodology\Laravel Coding\BookLibrary-Agentic\app\Repositories\CategoryRepository.php">
+        <class name="App\Repositories\CategoryRepository" namespace="App\Repositories">
+          <metrics complexity="7" methods="7" coveredmethods="7" conditionals="0" coveredconditionals="0" statements="16" coveredstatements="16" elements="23" coveredelements="23"/>
+        </class>
+        <line num="11" type="method" name="paginate" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="13" type="stmt" count="1"/>
+        <line num="14" type="stmt" count="1"/>
+        <line num="15" type="stmt" count="1"/>
+        <line num="16" type="stmt" count="1"/>
+        <line num="19" type="method" name="all" visibility="public" complexity="1" crap="1" count="9"/>
+        <line num="21" type="stmt" count="9"/>
+        <line num="24" type="method" name="findById" visibility="public" complexity="1" crap="1" count="7"/>
+        <line num="26" type="stmt" count="7"/>
+        <line num="29" type="method" name="create" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="31" type="stmt" count="2"/>
+        <line num="34" type="method" name="update" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="36" type="stmt" count="2"/>
+        <line num="37" type="stmt" count="2"/>
+        <line num="40" type="method" name="delete" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="42" type="stmt" count="2"/>
+        <line num="43" type="stmt" count="2"/>
+        <line num="46" type="method" name="booksPaginate" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="48" type="stmt" count="2"/>
+        <line num="49" type="stmt" count="2"/>
+        <line num="50" type="stmt" count="2"/>
+        <line num="51" type="stmt" count="2"/>
+        <line num="52" type="stmt" count="2"/>
+        <metrics loc="55" ncloc="55" classes="1" methods="7" coveredmethods="7" conditionals="0" coveredconditionals="0" statements="16" coveredstatements="16" elements="23" coveredelements="23"/>
+      </file>
+    </package>
+    <package name="App\Services">
+      <file name="D:\Engineer's Journey\Mahasiswa CS\Semester 4\Research Methodology\Laravel Coding\BookLibrary-Agentic\app\Services\AuthService.php">
+        <class name="App\Services\AuthService" namespace="App\Services">
+          <metrics complexity="7" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="9" elements="13" coveredelements="13"/>
+        </class>
+        <line num="11" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="20"/>
+        <line num="13" type="stmt" count="20"/>
+        <line num="15" type="method" name="register" visibility="public" complexity="1" crap="1" count="4"/>
+        <line num="17" type="stmt" count="4"/>
+        <line num="20" type="method" name="attemptLogin" visibility="public" complexity="3" crap="3" count="3"/>
+        <line num="22" type="stmt" count="3"/>
+        <line num="24" type="stmt" count="3"/>
+        <line num="25" type="stmt" count="2"/>
+        <line num="28" type="stmt" count="1"/>
+        <line num="31" type="method" name="updatePassword" visibility="public" complexity="2" crap="2" count="2"/>
+        <line num="33" type="stmt" count="2"/>
+        <line num="34" type="stmt" count="1"/>
+        <line num="37" type="stmt" count="1"/>
+        <metrics loc="40" ncloc="40" classes="1" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="9" elements="13" coveredelements="13"/>
+      </file>
+      <file name="D:\Engineer's Journey\Mahasiswa CS\Semester 4\Research Methodology\Laravel Coding\BookLibrary-Agentic\app\Services\AuthorService.php">
+        <class name="App\Services\AuthorService" namespace="App\Services">
+          <metrics complexity="10" methods="8" coveredmethods="8" conditionals="0" coveredconditionals="0" statements="16" coveredstatements="16" elements="24" coveredelements="24"/>
+        </class>
+        <line num="12" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="41"/>
+        <line num="14" type="stmt" count="41"/>
+        <line num="16" type="method" name="list" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="18" type="stmt" count="1"/>
+        <line num="21" type="method" name="all" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="23" type="stmt" count="2"/>
+        <line num="26" type="method" name="findOrFail" visibility="public" complexity="2" crap="2" count="6"/>
+        <line num="28" type="stmt" count="6"/>
+        <line num="30" type="stmt" count="6"/>
+        <line num="31" type="stmt" count="1"/>
+        <line num="34" type="stmt" count="5"/>
+        <line num="37" type="method" name="create" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="39" type="stmt" count="2"/>
+        <line num="42" type="method" name="update" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="44" type="stmt" count="1"/>
+        <line num="45" type="stmt" count="1"/>
+        <line num="48" type="method" name="delete" visibility="public" complexity="2" crap="2" count="2"/>
+        <line num="50" type="stmt" count="2"/>
+        <line num="52" type="stmt" count="2"/>
+        <line num="53" type="stmt" count="1"/>
+        <line num="56" type="stmt" count="1"/>
+        <line num="59" type="method" name="booksPaginate" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="61" type="stmt" count="2"/>
+        <line num="62" type="stmt" count="2"/>
+        <metrics loc="65" ncloc="65" classes="1" methods="8" coveredmethods="8" conditionals="0" coveredconditionals="0" statements="16" coveredstatements="16" elements="24" coveredelements="24"/>
+      </file>
+      <file name="D:\Engineer's Journey\Mahasiswa CS\Semester 4\Research Methodology\Laravel Coding\BookLibrary-Agentic\app\Services\BookService.php">
+        <class name="App\Services\BookService" namespace="App\Services">
+          <metrics complexity="7" methods="6" coveredmethods="6" conditionals="0" coveredconditionals="0" statements="11" coveredstatements="11" elements="17" coveredelements="17"/>
+        </class>
+        <line num="11" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="25"/>
+        <line num="13" type="stmt" count="25"/>
+        <line num="15" type="method" name="list" visibility="public" complexity="1" crap="1" count="7"/>
+        <line num="22" type="stmt" count="7"/>
+        <line num="25" type="method" name="findOrFail" visibility="public" complexity="2" crap="2" count="6"/>
+        <line num="27" type="stmt" count="6"/>
+        <line num="29" type="stmt" count="6"/>
+        <line num="30" type="stmt" count="1"/>
+        <line num="33" type="stmt" count="5"/>
+        <line num="36" type="method" name="create" visibility="public" complexity="1" crap="1" count="3"/>
+        <line num="38" type="stmt" count="3"/>
+        <line num="41" type="method" name="update" visibility="public" complexity="1" crap="1" count="3"/>
+        <line num="43" type="stmt" count="3"/>
+        <line num="44" type="stmt" count="3"/>
+        <line num="47" type="method" name="delete" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="49" type="stmt" count="1"/>
+        <line num="50" type="stmt" count="1"/>
+        <metrics loc="53" ncloc="53" classes="1" methods="6" coveredmethods="6" conditionals="0" coveredconditionals="0" statements="11" coveredstatements="11" elements="17" coveredelements="17"/>
+      </file>
+      <file name="D:\Engineer's Journey\Mahasiswa CS\Semester 4\Research Methodology\Laravel Coding\BookLibrary-Agentic\app\Services\CategoryService.php">
+        <class name="App\Services\CategoryService" namespace="App\Services">
+          <metrics complexity="9" methods="8" coveredmethods="8" conditionals="0" coveredconditionals="0" statements="14" coveredstatements="14" elements="22" coveredelements="22"/>
+        </class>
+        <line num="12" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="43"/>
+        <line num="14" type="stmt" count="43"/>
+        <line num="16" type="method" name="list" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="18" type="stmt" count="1"/>
+        <line num="21" type="method" name="all" visibility="public" complexity="1" crap="1" count="9"/>
+        <line num="23" type="stmt" count="9"/>
+        <line num="26" type="method" name="findOrFail" visibility="public" complexity="2" crap="2" count="7"/>
+        <line num="28" type="stmt" count="7"/>
+        <line num="30" type="stmt" count="7"/>
+        <line num="31" type="stmt" count="1"/>
+        <line num="34" type="stmt" count="6"/>
+        <line num="37" type="method" name="create" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="39" type="stmt" count="2"/>
+        <line num="42" type="method" name="update" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="44" type="stmt" count="2"/>
+        <line num="45" type="stmt" count="2"/>
+        <line num="48" type="method" name="delete" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="50" type="stmt" count="2"/>
+        <line num="51" type="stmt" count="2"/>
+        <line num="54" type="method" name="booksPaginate" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="56" type="stmt" count="2"/>
+        <line num="57" type="stmt" count="2"/>
+        <metrics loc="60" ncloc="60" classes="1" methods="8" coveredmethods="8" conditionals="0" coveredconditionals="0" statements="14" coveredstatements="14" elements="22" coveredelements="22"/>
+      </file>
+    </package>
+    <file name="D:\Engineer's Journey\Mahasiswa CS\Semester 4\Research Methodology\Laravel Coding\BookLibrary-Agentic\app\enums\CopyStatus.php">
+      <metrics loc="11" ncloc="11" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+    </file>
+    <file name="D:\Engineer's Journey\Mahasiswa CS\Semester 4\Research Methodology\Laravel Coding\BookLibrary-Agentic\app\enums\ReservationStatus.php">
+      <metrics loc="10" ncloc="10" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+    </file>
+    <file name="D:\Engineer's Journey\Mahasiswa CS\Semester 4\Research Methodology\Laravel Coding\BookLibrary-Agentic\app\enums\Role.php">
+      <metrics loc="10" ncloc="10" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+    </file>
+    <file name="D:\Engineer's Journey\Mahasiswa CS\Semester 4\Research Methodology\Laravel Coding\BookLibrary-Agentic\app\enums\TransactionStatus.php">
+      <metrics loc="10" ncloc="10" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+    </file>
+    <metrics files="37" loc="1444" ncloc="1435" classes="32" methods="130" coveredmethods="105" conditionals="0" coveredconditionals="0" statements="373" coveredstatements="328" elements="503" coveredelements="433"/>
+  </project>
+</coverage>
